@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Authorization-Spring-Security
+  security:
+    user:
+      name: prabhakar
+      password: prabhakar
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: authorization
