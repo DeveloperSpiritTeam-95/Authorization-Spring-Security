@@ -37,28 +37,30 @@ public class SecurityConfig {
 
 
 
-//    @Bean
-//    public UserDetailsService userDetailsService(){
-//        List<UserDetails> users = new ArrayList<>();
-//
-//        UserDetails userDetails = User.withDefaultPasswordEncoder()
-//                .username("user")
-//                .password("password")
-//                .roles("USER").build();
-//        UserDetails userDetails1 = User.withDefaultPasswordEncoder()
-//                .username("admin")
-//                .password("admin")
-//                .roles("ADMIN").build();
-//        users.add(userDetails);
-//        users.add(userDetails1);
-//
-//        return new InMemoryUserDetailsManager(users);
-//    }
+    // this not allow to practice in production server
+   /* @Bean
+    @Deprecated
+    public UserDetailsService userDetailsService(){
+        List<UserDetails> users = new ArrayList<>();
+
+        UserDetails userDetails = User.withDefaultPasswordEncoder()
+                .username("user")
+                .password("password")
+                .roles("USER").build();
+        UserDetails userDetails1 = User.withDefaultPasswordEncoder()
+                .username("admin")
+                .password("admin")
+                .roles("ADMIN").build();
+        users.add(userDetails);
+        users.add(userDetails1);
+
+        return new InMemoryUserDetailsManager(users);
+    }*/
 
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
+    public MyPasswordEncoder passwordEncoder(){
+        return new MyBCryptPasswordEncoder();
     }
 
 
