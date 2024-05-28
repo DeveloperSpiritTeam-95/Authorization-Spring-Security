@@ -5,18 +5,13 @@ import authentication.com.model.AuthUser;
 import authentication.com.model.UserRecord;
 import authentication.com.repository.AuthUserRepository;
 import lombok.RequiredArgsConstructor;
-import org.jasypt.util.password.StrongPasswordEncryptor;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.codec.Hex;
 import org.springframework.security.crypto.keygen.BytesKeyGenerator;
 import org.springframework.security.crypto.keygen.KeyGenerators;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.crypto.util.EncodingUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.MessageDigest;
 import java.util.Optional;
 import java.util.UUID;
 
