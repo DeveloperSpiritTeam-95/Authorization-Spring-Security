@@ -1,6 +1,5 @@
 package authentication.com.controller;
 
-import authentication.com.config.MyPasswordEncoder;
 import authentication.com.model.AuthUser;
 import authentication.com.model.UserRecord;
 import authentication.com.repository.AuthUserRepository;
@@ -10,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.keygen.BytesKeyGenerator;
 import org.springframework.security.crypto.keygen.KeyGenerators;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -23,7 +23,7 @@ public class UserController {
 
     private final AuthUserRepository repository;
 
-    private final MyPasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
 
     private final BytesKeyGenerator saltGenerator = KeyGenerators.secureRandom();
 
