@@ -51,6 +51,13 @@ public class UserController {
         }
     }
 
+
+    @PostMapping("/verifyUser")
+    public ResponseEntity<?> verifyUser(@PathVariable("code") String code){
+
+        return null;
+    }
+
     @GetMapping("/getUserById/{userId}")
     public ResponseEntity<?> getUserById(@PathVariable("userId") String userId){
         Optional<AuthUser> user = this.repository.findById(userId);
